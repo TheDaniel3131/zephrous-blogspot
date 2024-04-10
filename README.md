@@ -1,2 +1,2 @@
-# zephrous-blogpost
-My Blog: [zephrous-blogpost](https://z3phr0us.blogspot.com/)
+# zephrous-blogspot
+My Blog: [zephrous-blogspot](https://z3phr0us.blogspot.com/)
