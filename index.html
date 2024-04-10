@@ -94,17 +94,17 @@
 
 <Group description="Posts">
   <Variable name="post.text.background.color" description="Background color (text-only post)" type="color" default="#302c24"  value="#77e4ff"/>
-  <Variable name="post.title.font.small" description="Title font (small)" type="font" default="$(garamond20)"  value="normal 400 20px Arimo"/>
-  <Variable name="post.title.font.large" description="Title font (large)" type="font" default="$(garamond24)"  value="normal 400 24px Arimo"/>
+  <Variable name="post.title.font.small" description="Title font (small)" type="font" default="$(garamond20)"  value="normal 400 30px Arimo"/>
+  <Variable name="post.title.font.large" description="Title font (large)" type="font" default="$(garamond24)"  value="normal bold 40px Arimo"/>
   <Variable name="post.title.color" description="Title color" type="color" default="#000"  value="#ffffff"/>
   <Variable name="post.text.title.color" description="Title color (text-only post)" type="color" default="#fff"  value="#000000"/>
-  <Variable name="post.header.font" description="Header font" type="font" default="$(montserrat12)"  value="normal 700 12px Arimo"/>
+  <Variable name="post.header.font" description="Header font" type="font" default="$(montserrat12)"  value="normal 700 13px Arimo"/>
   <Variable name="post.header.color" description="Header color" type="color" default="rgba(0, 0, 0, 0.54)"  value="#ffffff"/>
-  <Variable name="post.text.header.color" description="Header color (text-only post)" type="color" default="rgba(255, 255, 255, 0.54)"  value="#000000"/>
-  <Variable name="post.footer.font" description="Post Footer Font" type="font" default="$(montserrat12)"  value="normal 700 12px Arimo"/>
-  <Variable name="post.footer.color" description="Footer color" type="color" default="#bf8b38"  value="#77e4ff"/>
-  <Variable name="post.text.font.small" description="Text font (small)" type="font" default="$(lora14)"  value="normal 400 14px Arimo"/>
-  <Variable name="post.text.font.large" description="Text font (large)" type="font" default="$(lora16)"  value="normal 400 16px Arimo"/>
+  <Variable name="post.text.header.color" description="Header color (text-only post)" type="color" default="rgba(255, 255, 255, 0.54)"  value="transparent"/>
+  <Variable name="post.footer.font" description="Post Footer Font" type="font" default="$(montserrat12)"  value="normal 700 15px Arimo"/>
+  <Variable name="post.footer.color" description="Footer color" type="color" default="#bf8b38"  value="#383838"/>
+  <Variable name="post.text.font.small" description="Text font (small)" type="font" default="$(lora14)"  value="normal 400 12px Arimo"/>
+  <Variable name="post.text.font.large" description="Text font (large)" type="font" default="$(lora16)"  value="normal 400 20px Arimo"/>
   <Variable name="post.text.color" description="Text color" type="color" default="#000"  value="#ffffff"/>
   <Variable name="post.text.footer.color" description="Footer color (text-only post)" type="color" default="#bf8b38"  value="#000000"/>
   <Variable name="post.blockquote.font.small" description="Blockquote font (small)" type="font" default="$(montserrat16)"  value="normal 700 16px Arimo"/>
@@ -2693,7 +2693,7 @@ z-index:32
                     <b:include data='{ iconClass: &quot;touch-icon search-expand-icon&quot; }' name='searchIcon'/>
                   </button>
                   <b:section id='search_top' name='Search (Top)' showaddelement='false'>
-                    <b:widget id='BlogSearch1' locked='true' title='Search This Blog' type='BlogSearch' visible='true'>
+                    <b:widget id='BlogSearch1' locked='true' title='Search Me More' type='BlogSearch' visible='true'>
                       <b:includable id='main'>
   <b:include name='widget-title'/>
   <b:include name='content'/>
@@ -2733,7 +2733,7 @@ z-index:32
                     <b:widget-settings>
                       <b:widget-setting name='displayUrl'/>
                       <b:widget-setting name='displayHeight'>0</b:widget-setting>
-                      <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+                      <b:widget-setting name='sectionWidth'>456</b:widget-setting>
                       <b:widget-setting name='useImage'>false</b:widget-setting>
                       <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
                       <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
@@ -2935,13 +2935,13 @@ z-index:32
                   <b:widget-setting name='showShareButtons'>true</b:widget-setting>
                   <b:widget-setting name='showCommentLink'>true</b:widget-setting>
                   <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
-                  <b:widget-setting name='showAuthor'>false</b:widget-setting>
+                  <b:widget-setting name='showAuthor'>true</b:widget-setting>
                   <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
                   <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
                   <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
                   <b:widget-setting name='timestampLabel'/>
                   <b:widget-setting name='reactionsLabel'/>
-                  <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                  <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
                   <b:widget-setting name='style.layout'>1x1</b:widget-setting>
                   <b:widget-setting name='showLabels'>true</b:widget-setting>
                   <b:widget-setting name='showLocation'>true</b:widget-setting>
@@ -3455,7 +3455,7 @@ z-index:32
         <b:section class='footer' id='footer' name='Footer' showaddelement='false' tag='footer'>
           <b:widget id='Attribution1' locked='true' title='' type='Attribution' visible='true'>
             <b:widget-settings>
-              <b:widget-setting name='copyright'/>
+              <b:widget-setting name='copyright'>Copyright &#169; 2024 Zephrous. All Rights Reserved.</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main' var='this'>
   <div class='widget-content'>
@@ -3594,6 +3594,38 @@ z-index:32
           </a>
         </b:includable>
         </b:widget>
+        <b:widget id='Label1' locked='false' title='Labels' type='Label' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+            <b:widget-setting name='display'>CLOUD</b:widget-setting>
+            <b:widget-setting name='selectedLabelsList'/>
+            <b:widget-setting name='showType'>ALL</b:widget-setting>
+            <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main' var='this'>
+          <details class='collapsible extendable'>
+            <b:attr cond='data:view.isLabelSearch' name='open' value='open'/>
+            <b:with value='true' var='renderAsDetails'>
+            <b:with value='data:messages.labels' var='defaultTitle'>
+              <b:include name='super.main'/>
+            </b:with>
+            </b:with>
+          </details>
+        </b:includable>
+          <b:includable id='cloud'>
+          <b:include data='{                               buttonClass: &quot;flat-button&quot;,                               items: data:this.labels,                               itemSet: &quot;labels&quot;,                               itemsMarkup: &quot;super.cloud&quot;                             }' name='extendableItems'/>
+        </b:includable>
+          <b:includable id='content'>
+  <div class='widget-content'>
+    <b:class expr:name='data:this.display + &quot;-label-widget-content&quot;'/>
+    <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
+    <b:include cond='data:this.display == &quot;cloud&quot;' name='cloud'/>
+  </div>
+</b:includable>
+          <b:includable id='list'>
+          <b:include data='{                               buttonClass: &quot;flat-button&quot;,                               items: data:this.labels,                               itemSet: &quot;labels&quot;,                               itemsMarkup: &quot;super.list&quot;                             }' name='extendableItems'/>
+        </b:includable>
+        </b:widget>
         <b:widget id='BlogArchive1' locked='false' title='' type='BlogArchive' visible='false'>
           <b:widget-settings>
             <b:widget-setting name='showStyle'>FLAT</b:widget-setting>
@@ -3659,38 +3691,6 @@ z-index:32
     </b:loop>
   </ul>
 </b:includable>
-        </b:widget>
-        <b:widget id='Label1' locked='false' title='Labels' type='Label' visible='false'>
-          <b:widget-settings>
-            <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-            <b:widget-setting name='display'>LIST</b:widget-setting>
-            <b:widget-setting name='selectedLabelsList'/>
-            <b:widget-setting name='showType'>ALL</b:widget-setting>
-            <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main' var='this'>
-          <details class='collapsible extendable'>
-            <b:attr cond='data:view.isLabelSearch' name='open' value='open'/>
-            <b:with value='true' var='renderAsDetails'>
-            <b:with value='data:messages.labels' var='defaultTitle'>
-              <b:include name='super.main'/>
-            </b:with>
-            </b:with>
-          </details>
-        </b:includable>
-          <b:includable id='cloud'>
-          <b:include data='{                               buttonClass: &quot;flat-button&quot;,                               items: data:this.labels,                               itemSet: &quot;labels&quot;,                               itemsMarkup: &quot;super.cloud&quot;                             }' name='extendableItems'/>
-        </b:includable>
-          <b:includable id='content'>
-  <div class='widget-content'>
-    <b:class expr:name='data:this.display + &quot;-label-widget-content&quot;'/>
-    <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
-    <b:include cond='data:this.display == &quot;cloud&quot;' name='cloud'/>
-  </div>
-</b:includable>
-          <b:includable id='list'>
-          <b:include data='{                               buttonClass: &quot;flat-button&quot;,                               items: data:this.labels,                               itemSet: &quot;labels&quot;,                               itemsMarkup: &quot;super.list&quot;                             }' name='extendableItems'/>
-        </b:includable>
         </b:widget>
         <b:widget id='ReportAbuse1' locked='true' title='' type='ReportAbuse' visible='false'>
           <b:includable id='main'>
