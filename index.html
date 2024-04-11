@@ -84,7 +84,7 @@
   <Variable name="header.title.font.large" description="Title font (large)" type="font" default="$(garamond36)"  value="normal bold 50px Arimo"/>
   <Variable name="header.title.color" description="Title color" type="color" default="#000"  value="#ffffff"/>
   <Variable name="header.text.font" description="Text font" type="font" default="$(montserrat12)"  value="normal 400 15px Arimo"/>
-  <Variable name="header.text.color" description="Text color" type="color" default="rgba(0, 0, 0, 0.54)"  value="#c6dafc"/>
+  <Variable name="header.text.color" description="Text color" type="color" default="rgba(0, 0, 0, 0.54)"  value="#c9d9dd"/>
   <Variable name="header.pageList.font" description="Page list font" type="font" default="$(montserrat14)"  value="normal 700 14px Arimo"/>
   <Variable name="header.pageList.color" description="Page list color" type="color" default="rgba(0, 0, 0, 0.54)"  value="#ffffff"/>
   <Variable name="header.pageList.selected.font" description="Page list font (selected page)" type="font" default="$(montserratBold14)"  value="normal 700 14px Arimo"/>
@@ -133,7 +133,7 @@
   <Variable name="sidebar.profile.description.font" description="Profile description font" type="font" default="$(montserrat12)"  value="normal 400 13px Lato, sans-serif"/>
   <Variable name="sidebar.profile.description.color" description="Profile description color" type="color" default="rgba(0, 0, 0, 0.87)"  value="#7BAAF7"/>
   <Variable name="sidebar.action.font" description="Action font" type="font" default="$(montserrat14)"  value="normal 700 14px Lato, sans-serif"/>
-  <Variable name="sidebar.action.color" description="Action color" type="color" default="#bf8b38"  value="#C6DAFC"/>
+  <Variable name="sidebar.action.color" description="Action color" type="color" default="#bf8b38"  value="#eefcfd"/>
   <Variable name="sidebar.widget.title.font" description="Gadget title font" type="font" default="$(montserrat16)"  value="normal 700 16px Lato, sans-serif"/>
   <Variable name="sidebar.widget.title.color" description="Gadget title color" type="color" default="rgba(0, 0, 0, 0.54)"  value="#ffffff"/>
   <Variable name="sidebar.widget.text.font" description="Gadget text font" type="font" default="$(montserrat14)"  value="normal 700 14px Lato, sans-serif"/>
@@ -2729,7 +2729,7 @@ z-index:32
               </b:if>
               <div class='blog-name'>
                 <b:section id='header' name='Header' showaddelement='false'>
-                  <b:widget id='Header1' locked='true' title='🐱‍👤Zephrous Blog (Header)' type='Header' visible='true'>
+                  <b:widget id='Header1' locked='true' title='&lt;b&gt;🐱‍👤Zephrous Blog&lt;/b&gt; (Header)' type='Header' visible='true'>
                     <b:widget-settings>
                       <b:widget-setting name='displayUrl'/>
                       <b:widget-setting name='displayHeight'>0</b:widget-setting>
@@ -2860,10 +2860,11 @@ z-index:32
               </div>
             </b:if>
             <b:section ads='true' class='main' id='page_body' name='Page Body' showaddelement='false'>
-              <b:widget cond='data:view.isHomepage' id='FeaturedPost1' locked='true' title='' type='FeaturedPost' version='2' visible='false'>
+              <b:widget cond='data:view.isHomepage' id='FeaturedPost1' locked='true' title='Featured Blogs' type='FeaturedPost' version='2' visible='true'>
                 <b:widget-settings>
                   <b:widget-setting name='showSnippet'>true</b:widget-setting>
                   <b:widget-setting name='showPostTitle'>true</b:widget-setting>
+                  <b:widget-setting name='postId'>0</b:widget-setting>
                   <b:widget-setting name='showFirstImage'>true</b:widget-setting>
                   <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
                 </b:widget-settings>
