@@ -52,7 +52,7 @@
 <Variable name="endSide" description="End side in blog language" type="automatic" default="right" hideEditor="true" />
 
 <Group description="Body">
-  <Variable name="body.background" description="Background" type="background" color="$(body.background.color)" default="$(color) none repeat scroll top left"  value="$(color) url(https://blogger.googleusercontent.com/img/a/AVvXsEhT4G6RluJGFG98ZFIZhDxqNelEjMMTiIowK82oqlTDJhnUp4xyD--RNOwV7TFrS-7H0U_4bgIpl2UrRyRazqZBD25T_G1uO8SpvDO_otZADJUgxKtxflcyGNxAkPuEeaSmhUwk5ggcqfdAx91eR_aHKpfX7Q7RWG-r2EVYnqlh_z6NdQP01u0iKan2JjE=s1600) repeat scroll top left"/>
+  <Variable name="body.background" description="Background" type="background" color="$(body.background.color)" default="$(color) none repeat scroll top left"  value="$(color) url(https://blogger.googleusercontent.com/img/a/AVvXsEhuoUSteBoA8Pr0sJuZR18U-lLoeCOaExkgYXCLltWrXC3ihhCzbPmlckOmuIg_yPCYCEkMLg9ORc_idFhbai2rFkIVWWORoZgIT6W9QA3k4wyQlYWL-eiKwFfSkgSJp_cxfT1X7D27A9pnPfl1OaGEUBQwDlh-3dmdV36rkX5WTZceHGyS27yK8RryIac=s1600) repeat scroll top left"/>
   <Variable name="body.background.color" description="Background color" type="color" default="#fff"  value="#000309"/>
   <Variable name="body.title.font.small" description="Title font (small)" type="font" default="$(garamond20)"  value="normal 300 20px Arimo"/>
   <Variable name="body.title.font.large" description="Title font (large)" type="font" default="$(garamond24)"  value="normal 300 24px Arimo"/>
@@ -127,7 +127,7 @@
 
 <Group description="Sidebar">
   <Variable name="sidebar.background.color" description="Background color" type="color" default="#fff"  value="#01050c"/>
-  <Variable name="sidebar.separator.color" description="Separator color" type="color" default="rgba(0, 0, 0, 0.54)"  value="#090600"/>
+  <Variable name="sidebar.separator.color" description="Separator color" type="color" default="rgba(0, 0, 0, 0.54)"  value="#3c7280"/>
   <Variable name="sidebar.profile.name.font" description="Profile name font" type="font" default="$(garamond24)"  value="normal bold 30px Arimo"/>
   <Variable name="sidebar.profile.name.color" description="Profile name color" type="color" default="#000"  value="#ffffff"/>
   <Variable name="sidebar.profile.description.font" description="Profile description font" type="font" default="$(montserrat12)"  value="normal 400 13px Lato, sans-serif"/>
@@ -162,9 +162,9 @@
   <Variable name="sidebar.width" description="Sidebar width" type="length"
             min="100px" max="1000px" default="284px"  value="300px"/>
   <Variable name="content.width" description="Content width" type="length"
-            min="660px" max="2400px" default="922px"  value="950px"/>
+            min="660px" max="2400px" default="922px"  value="1000px"/>
   <Variable name="content.margin" description="Content margin" type="length"
-            min="0px" max="1000px" default="117px"  value="210px"/>
+            min="0px" max="1000px" default="117px"  value="150px"/>
 </Group>
  */
 
@@ -2324,7 +2324,31 @@ overflow:visible;
 z-index:32
 }
 }
-]]></b:skin>
+.sidebar-container::-webkit-scrollbar {
+  width: 12.5px;
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background:  transparent;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.sidebar-container {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.sidebar-container::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}]]></b:skin>
     <b:template-skin>
       <![CDATA[
       body#layout .hidden,
