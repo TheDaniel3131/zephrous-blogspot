@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /search
+Allow: /
+
+Sitemap: https://z3phr0us.blogspot.com/sitemap.xml
